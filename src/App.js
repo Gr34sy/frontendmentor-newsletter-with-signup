@@ -20,13 +20,13 @@ function App() {
         {showAlert && <Alert />}
       </AppWrapper>
 
-      <footer class="app__footer">
+      <footer className="app__footer">
         Challenge by{" "}
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" without rel="noreferrer">
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">
           Frontend Mentor
         </a>
         . Coded by{" "}
-        <a href="https://heroic-quokka-3e69bf.netlify.app" target="_blank" without rel="noreferrer">
+        <a href="https://heroic-quokka-3e69bf.netlify.app" target="_blank" rel="noreferrer">
           Greasy
         </a>
         .
