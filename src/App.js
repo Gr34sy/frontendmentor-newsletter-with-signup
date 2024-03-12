@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './styles/App.css';
-import './styles/reset.css'
+// styles
+import "./styles/App.css";
+import "./styles/reset.css";
+
+//components
+import { AppWrapper } from "./components/AppWrapper";
+import { Card } from "./components/Card";
+import { Alert } from "./components/Alert";
+
+//hooks
+import { useState } from "react";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+      <AppWrapper>
+
+      </AppWrapper>
+
+      <footer class="app__footer">
+        Challenge by{" "}
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor
         </a>
-      </header>
+        . Coded by{" "}
+        <a href="https://heroic-quokka-3e69bf.netlify.app" target="_blank">
+          Greasy
+        </a>
+        .
+      </footer>
     </div>
   );
 }
