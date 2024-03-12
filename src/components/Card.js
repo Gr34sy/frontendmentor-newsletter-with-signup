@@ -5,17 +5,10 @@ import signUpMobile from "../assets/images/illustration-sign-up-mobile.svg";
 export function Card() {
   return (
     <section className="card">
-      <div className="card__img">
-      <img
-        src={signUpDesktop}
-        alt="illustration of a browser"
-        className="img--desktop"
-      />
-
+      <div className="card__img img--mobile">
       <img
         src={signUpMobile}
         alt="illustration of a browser"
-        className="img--mobile"
       />
       </div>
 
@@ -24,6 +17,13 @@ export function Card() {
         monthly updates on: Product discovery and building what matters
         Measuring to ensure updates are a success And much more! Email address
         email@company.com Subscribe to monthly newsletter
+      </div>
+
+      <div className="card__img img--desktop">
+      <img
+        src={signUpDesktop}
+        alt="illustration of a browser"
+      />
       </div>
     </section>
   );
