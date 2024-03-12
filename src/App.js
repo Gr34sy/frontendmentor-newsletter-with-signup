@@ -11,19 +11,22 @@ import { Alert } from "./components/Alert";
 import { useState } from "react";
 
 function App() {
+  const [showAlert, setShowAlert] = useState(false);
+
   return (
     <div className="App">
       <AppWrapper>
-
+        {!showAlert && <Card />}
+        {showAlert && <Alert />}
       </AppWrapper>
 
       <footer class="app__footer">
         Challenge by{" "}
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" without rel="noreferrer">
           Frontend Mentor
         </a>
         . Coded by{" "}
-        <a href="https://heroic-quokka-3e69bf.netlify.app" target="_blank">
+        <a href="https://heroic-quokka-3e69bf.netlify.app" target="_blank" without rel="noreferrer">
           Greasy
         </a>
         .
