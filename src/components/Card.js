@@ -3,14 +3,20 @@ import signUpDesktop from "../assets/images/illustration-sign-up-desktop.svg";
 import signUpMobile from "../assets/images/illustration-sign-up-mobile.svg";
 import iconList from "../assets/images/icon-list.svg";
 
-export function Card() {
+export function Card({action}) {
+  function handleSubmit(){
+    if(typeof action === "function"){
+      action();
+    }
+  }
+
   return (
     <section className="card">
       <div className="card__img img--mobile">
         <img src={signUpMobile} alt="illustration of a browser" />
       </div>
 
-      <div className="card__content">
+      <div className="content">
         <h1 className="content__h1">Stay updated!</h1>
 
         <p className="content__p">
@@ -34,7 +40,7 @@ export function Card() {
           </li>
         </ul>
         
-        <form className="card__content_form">
+        <form className="content__form" onSubmit={handleSubmit}>
             <label htmlFor="email">
                 <p>
                 Email address
@@ -43,8 +49,8 @@ export function Card() {
                 <p>
                 </p>
             </label>
-            <input type="email" id="email" placeholder="email@company.com"/>
-            <button type="submit">Subscribe to monthly newsletter</button>
+            <input type="email" id="email" placeholder="email@company.com" autocomplete="off"/>
+            <button type="submit" className="custom-button">Subscribe to monthly newsletter</button>
         </form>
       </div>
 

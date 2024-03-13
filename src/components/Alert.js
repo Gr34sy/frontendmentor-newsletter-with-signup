@@ -1,9 +1,25 @@
-export function Alert() {
+import iconSuccess from './../assets/images/icon-success.svg';
+
+export function Alert({ action }) {
+  function closeAlert() {
+    if (typeof action === "function") {
+      action();
+    }
+  }
+
   return (
     <section className="alert">
-      Thanks for subscribing! A confirmation email has been sent to
-      ash@loremcompany.com. Please open it and click the button inside to
-      confirm your subscription. Dismiss message
+      <div className="content">
+        <img src={iconSuccess} alt="checkmark" />
+        <h1 className="content__h1">Thanks for subscribing!</h1>
+        <p>
+          A confirmation email has been sent to <span>ash@loremcompany.com</span>. Please
+          open it and click the button inside to confirm your subscription.{" "}
+        </p>
+        <button className="custom-button" onClick={closeAlert}>
+          Dismiss message
+        </button>
+      </div>
     </section>
   );
 }

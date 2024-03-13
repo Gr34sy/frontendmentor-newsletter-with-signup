@@ -16,8 +16,8 @@ function App() {
   return (
     <div className="App">
       <AppWrapper>
-        {!showAlert && <Card />}
-        {showAlert && <Alert />}
+        {!showAlert && <Card action={() => setShowAlert(true)}/>}
+        {showAlert && <Alert action={() => setShowAlert(false)}/>}
       </AppWrapper>
 
       <footer className="app__footer">
