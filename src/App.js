@@ -16,17 +16,25 @@ function App() {
   return (
     <div className="App">
       <AppWrapper>
-        {!showAlert && <Card action={() => setShowAlert(true)}/>}
-        {showAlert && <Alert action={() => setShowAlert(false)}/>}
+        {!showAlert && <Card action={() => setShowAlert(true)} />}
+        {showAlert && <Alert action={() => setShowAlert(false)} />}
       </AppWrapper>
 
       <footer className="app__footer">
         Challenge by{" "}
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noreferrer"
+        >
           Frontend Mentor
         </a>
         . Coded by{" "}
-        <a href="https://heroic-quokka-3e69bf.netlify.app" target="_blank" rel="noreferrer">
+        <a
+          href="https://heroic-quokka-3e69bf.netlify.app"
+          target="_blank"
+          rel="noreferrer"
+        >
           Greasy
         </a>
         .
