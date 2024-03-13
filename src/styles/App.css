@@ -2,6 +2,7 @@
 
 :root {
   /* colors */
+  --tomato: hsl(4, 100%, 67%);
   --slate-grey: hsl(234, 29%, 20%);
   --charcoal-grey: hsl(235, 18%, 26%);
   --grey: hsl(231, 7%, 60%);
@@ -113,7 +114,7 @@ a {
   display: flex;
   justify-content: space-between;
 }
-.content__form > input[type="email"] {
+.custom-input{
   display: block;
   width: 100%;
   padding: 0.8rem 1rem;
@@ -124,13 +125,25 @@ a {
   border: 1px solid var(--grey);
   border-radius: calc(var(--border-radius) - 12px);
 }
-input[type="email"]:focus {
+.custom-input:focus {
   outline: none;
   border-color: var(--charcoal-grey);
   color: var(--charcoal-grey);
 }
-input[type="email"]:active{
+.custom-input:active{
   background-color: var(--white);
+}
+.input--red{
+  background-color: rgba(245, 4, 4, 0.2);
+  border-color: var(--tomato);
+  color: var(--tomato);
+}
+.input--red::placeholder{
+  color: var(--tomato);
+}
+
+.content__form_validation-message{
+  color: var(--tomato);
 }
 
 .content > p span{
