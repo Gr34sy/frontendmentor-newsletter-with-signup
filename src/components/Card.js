@@ -49,7 +49,7 @@ export function Card({action}) {
                 <p>
                 </p>
             </label>
-            <input type="email" id="email" placeholder="email@company.com" autocomplete="off"/>
+            <input type="email" id="email" placeholder="email@company.com" autoComplete="off"/>
             <button type="submit" className="custom-button">Subscribe to monthly newsletter</button>
         </form>
       </div>
